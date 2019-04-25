@@ -36,13 +36,13 @@ configuration: ## Section
     ## However changing http to https is okay and has no consequences.
     ## If you do change the URL, you will have to start again as the URL
     ## will be hardcoded into the database.
-    #url: "https://example.org/"
+    url: "http://localhost:3000/"
 
     ## Set the bundle of certificate authorities (CA) certificates.
     ## This is specific to your operating system.
     ## Examples (uncomment the relevant one or add your own):
     ## For Debian, Ubuntu, Archlinux, Gentoo (package ca-certificates):
-    #certificate_authorities: '/etc/ssl/certs/ca-certificates.crt'
+    certificate_authorities: '/etc/ssl/certs/ca-certificates.crt'
     ## For CentOS, Fedora:
     #certificate_authorities: '/etc/pki/tls/certs/ca-bundle.crt'
 
@@ -58,7 +58,7 @@ configuration: ## Section
     ## you're not using SSL. Also there is no guarantee that posting to
     ## services will be possible if SSL is disabled.
     ## Do not change this default unless you are sure!
-    #require_ssl: true
+    require_ssl: false
 
     ## Single-process mode (default=false).
     ## If set to true, Diaspora will work with just the appserver (Unicorn by
@@ -183,7 +183,7 @@ configuration: ## Section
     ## Rails environment (default='development').
     ## The environment in which the server should be started by default.
     ## Change this to 'production' if you wish to run a production environment.
-    #rails_environment: 'development'
+    rails_environment: 'production'
 
     ## Write unicorn stderr and stdout log.
     #stderr_log: '/usr/local/app/diaspora/log/unicorn-stderr.log'
